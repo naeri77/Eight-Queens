@@ -108,10 +108,10 @@ def getParent():
 			if parent2 != parent1:
 				break
 			else:
-				print "equal parents"
+				print ("equal parents")
 				continue
 		except:
-			print "exception"
+			print ("exception")
 			continue
 
 	if parent1 is not None and parent2 is not None:
@@ -144,7 +144,7 @@ def mutate(child):
 	return child
 
 def GA(iteration):
-	print " #"*10 ,"Executing Genetic  generation : ", iteration , " #"*10
+	print (" #"*10 ,"Executing Genetic  generation : ", iteration , " #"*10)
 	globals()
 	newpopulation = []
 	for i in range(len(population)):
@@ -174,7 +174,7 @@ def stop():
 
 population = generatePopulation(1000)
 
-print "POPULATION size : ", population
+print ("POPULATION size : "), population
 
 iteration = 0;
 while not stop():
@@ -182,7 +182,7 @@ while not stop():
 	population = GA(iteration)
 	iteration +=1 
 
-print "Iteration number : ", iteration
+print ("Iteration number : "), iteration
 for each in population:
 	if each.fitness == 28:
-		print each.sequence
+		print (each.sequence)
